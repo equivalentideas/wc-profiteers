@@ -40,9 +40,9 @@ namespace :morph do
         Contract.where(can_id: contract_data["contract_award_notice_id"]).first_or_initialize do |contract|
           # If there's an ammended value, get that.
           if contract_data["amended_contract_value_est"] === nil
-            contract.value = contract_data["contract_value_est"]
+            v = contract_data["contract_value_est"]
           else
-            contract.value = contract_data["amended_contract_value_est"]
+            v = contract_data["amended_contract_value_est"]
           end
 
           contract.update(
@@ -50,7 +50,7 @@ namespace :morph do
            url: contract_data["url"],
            start_date: Date.parse(contract_data["contract_start_date"]),
            end_date: Date.parse(contract_data["contract_end_date"]),
-           value: contract.value,
+           value: v,
            contractor_id: Contractor.where(abn: contract_data["abn"]).first.id
           )
         end
