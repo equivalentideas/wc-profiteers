@@ -3,4 +3,8 @@ class Contractor < ActiveRecord::Base
 
   validates :name, :abn, presence: true
   validates :abn, uniqueness: true
+
+  def total_est_contract_value
+    contracts.sum(:value)
+  end
 end
