@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150510055529) do
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "abn"
+    t.string   "abn"
   end
 
   add_index "contractors", ["abn"], name: "index_contractors_on_abn", using: :btree
