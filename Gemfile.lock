@@ -43,6 +43,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    dotenv (2.0.0)
+    dotenv-rails (2.0.0)
+      dotenv (= 2.0.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -179,6 +182,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   growl
   guard
   guard-livereload
