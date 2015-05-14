@@ -8,4 +8,7 @@
       %ul.contracts
         - contractor.contracts.each do |contract|
           %li.contract
-            %p= contract.description
+            %p
+              #{number_to_currency(contract.value, precision: 0)}
+              for
+              “#{link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")}”.
