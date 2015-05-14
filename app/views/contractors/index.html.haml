@@ -1,6 +1,6 @@
 %h1 Who profits from WestConnex?
 %ul.contractors
   - @contractors.each do |c|
-    %li
-      = c.name
-      = number_to_currency(c.total_est_contract_value)
+    %li.contractor
+      %h2.contractor-name= c.name
+      %span.contractor-value= number_to_currency(c.total_est_contract_value)
