@@ -4,3 +4,4 @@
     %li.contractor
       %h2.contractor-name= c.name
       %span.contractor-value= number_to_currency(c.total_est_contract_value, precision: 0)
+      %h3.contract-counter= pluralize(c.contracts.count, "contract")
