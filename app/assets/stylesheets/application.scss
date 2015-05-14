@@ -1,6 +1,7 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: .5em 5%;
+  max-width: 35em;
   font-family: "jaf-facitweb", verdana, sans-serif;
   font-size: 1.0625em;
   line-height: 1.5;
@@ -25,8 +26,16 @@ ul {
   list-style: none;
 }
 
+.lede {
+  margin-bottom: 2.5em;
+}
+
 .contractor {
   overflow: auto;
+
+  @media (min-width: 40em) {
+    margin-bottom: 2.5em;
+  }
 }
 
 .contractor-name {
@@ -49,4 +58,5 @@ ul {
 
 .contracts {
   font-size: .882em;
+  max-width: 35em;
 }
