@@ -24,3 +24,29 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+.contractor {
+  overflow: auto;
+}
+
+.contractor-name {
+  font-size: 1em;
+  width: 70%;
+  float: left;
+}
+
+.contractor-value {
+  font-size: .882em;
+  float: right;
+}
+
+.contract-counter {
+  font-size: .882em;
+  font-weight: normal;
+  float: none;
+  clear: both;
+}
+
+.contracts {
+  font-size: .882em;
+}
