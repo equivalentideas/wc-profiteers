@@ -1,6 +1,7 @@
 %h1 Who profits from WestConnex?
 %p.lede
-  This is a list of companies and their contracts to build WestConnex.
+  These #{@contractors.count} companies have been contracted by the NSW Government.
+  So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
 %ul.contractors
   - @contractors.each do |contractor|
     %li.contractor
