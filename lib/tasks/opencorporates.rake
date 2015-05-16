@@ -5,7 +5,7 @@ namespace :opencorporates do
 
     oc_url_base = "http://api.opencorporates.com/v0.4.1/companies/au/"
 
-    on_opencorporates = 0
+    websites_updated = 0
 
     Contractor.where.not(acn: nil).each do |contractor|
       # if the company exists on opencorporates
@@ -17,7 +17,7 @@ namespace :opencorporates do
             if datum["datum"]["data_type"] == "Website"
               contractor.update!(website: datum["datum"]["description"])
               puts "Updated #{contractor.name} website from opencorporates"
-              on_opencorporates += 1
+              websites_updated += 1
             end
           end
         else
@@ -28,7 +28,7 @@ namespace :opencorporates do
       end
     end
 
-    msg = "#{on_opencorporates} of #{Contractor.where.not(acn: nil).count} contractors with ACNs on OC."
+    msg = "#{websites_updated} of #{Contractor.where.not(acn: nil).count} contractors with ACNs on OC."
     msg += " #{Contractor.where(acn: nil).count} had no ACN."
     puts msg
   end
