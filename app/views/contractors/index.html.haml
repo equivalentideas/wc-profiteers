@@ -1,7 +1,7 @@
 %h1 Who profits from WestConnex?
 %p.lede
   These #{@contractors.count} companies have been contracted by the NSW Government.
-  So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value))}.
+  So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
 %ul.contractors
   - @contractors.each do |contractor|
     %li.contractor
