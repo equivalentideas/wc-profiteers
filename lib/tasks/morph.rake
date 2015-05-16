@@ -8,7 +8,7 @@ namespace :morph do
 
     current_count = Contractor.count
     contractors.each do |c|
-      Contractor.create(
+      Contractor.where(abn: c["abn"]).first_or_initialize.update!(
         abn: c["abn"],
         name: c["name"],
         acn: c["acn"],
