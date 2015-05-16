@@ -9,9 +9,8 @@ namespace :opencorporates do
 
     Contractor.where.not(acn: nil).each do |contractor|
       # if the company exists on opencorporates
-      url = oc_url_base + contractor.acn + '/data'
       begin
-        data = JSON.parse(open(url).read)["results"]["data"]
+        data = JSON.parse(open(oc_url_base + contractor.acn + '/data').read)["results"]["data"]
         # Has data
         if !data.empty?
           data.each do |datum|
@@ -25,7 +24,7 @@ namespace :opencorporates do
           puts "#{contractor.name} is on OC but has no data items"
         end
       rescue OpenURI::HTTPError => e
-        puts "#{e} for #{url}, #{contractor.name}"
+        puts "#{e} for #{oc_url_base + contractor.acn + '/data'} #{contractor.name}"
       end
     end
 
