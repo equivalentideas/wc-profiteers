@@ -1,6 +1,6 @@
 namespace :opencorporates do
-  desc "Get company data from opencorporates"
-  task :get_company_data => :environment do
+  desc "Get company website from opencorporates"
+  task :get_company_website => :environment do
     require 'open-uri'
 
     oc_url_base = "http://api.opencorporates.com/v0.4.1/companies/au/"
