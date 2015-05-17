@@ -33,6 +33,7 @@ end
 group :development do
   gem 'guard'
   gem 'guard-livereload', require: false
+  gem 'guard-rspec', require: false
   gem 'growl'
   gem 'better_errors'
   gem 'spring'
