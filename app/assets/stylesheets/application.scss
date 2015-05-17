@@ -31,14 +31,23 @@ ul {
 }
 
 .contractor {
-  overflow: auto;
-
   @media (min-width: 40em) {
     margin-bottom: 2.5em;
   }
   
-  > p {
-    clear: both;
+  header {
+    margin: 0 0 1em;
+    margin: 0 0 1rem;
+    overflow: auto; // clearfix
+
+    h2 {
+      margin: 0;
+    }
+
+    > p {
+      clear: both;
+      margin: 0;
+    }
   }
 }
 
