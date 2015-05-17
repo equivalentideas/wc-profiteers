@@ -116,6 +116,10 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    paper_trail (4.0.0.rc1)
+      activerecord (>= 3.0, < 6.0)
+      activesupport (>= 3.0, < 6.0)
+      request_store (~> 1.1.0)
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -150,6 +154,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.0)
       json (~> 1.4)
+    request_store (1.1.0)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -222,6 +227,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  paper_trail (~> 4.0.0.rc)
   pg
   rails (= 4.1.10)
   rails_12factor

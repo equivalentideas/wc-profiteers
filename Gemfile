@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'paper_trail', '~> 4.0.0.rc'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
