@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519133721) do
+ActiveRecord::Schema.define(version: 20150522101617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20150519133721) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "contractor_id"
+    t.date     "date_scraped"
+    t.string   "agency"
+    t.text     "provisions_for_additional_services"
+    t.string   "method_of_tendering"
+    t.text     "provisions_for_changing_value"
+    t.text     "provisions_for_renegotiation"
+    t.text     "tender_evaluation_criteria"
+    t.boolean  "piggyback_clause"
+    t.text     "subcontractors"
   end
 
   add_index "contracts", ["contractor_id"], name: "index_contracts_on_contractor_id", using: :btree
