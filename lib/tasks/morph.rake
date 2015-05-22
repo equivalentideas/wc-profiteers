@@ -51,7 +51,16 @@ namespace :morph do
            start_date: Date.parse(contract_data["contract_start_date"]),
            end_date: Date.parse(contract_data["contract_end_date"]),
            value: v,
-           contractor_id: Contractor.where(abn: contract_data["abn"]).first.id
+           contractor_id: Contractor.where(abn: contract_data["abn"]).first.id,
+           date_scraped: Date.parse(contract_data["date_scraped"]),
+           agency: contract_data["agency"],
+           provisions_for_additional_services: contract_data["any_provisions_for_payment_to_the_contractor_for_operational_or_maintenance_services"],
+           method_of_tendering: contract_data["method_of_tendering"],
+           provisions_for_changing_value: contract_data["description_of_any_provision_under_which_the_amount_payable_to_the_contractor_may_be_varied"],
+           provisions_for_renegotiation: contract_data["description_of_any_provisions_under_which_the_contract_may_be_renegotiated"],
+           tender_evaluation_criteria: contract_data["tender_evaluation_criteria"],
+           piggyback_clause: contract_data["contract_contains_agency_piggyback_clause"],
+           subcontractors: contract_data["name_of_sub_contractors"]
           )
         end
       end
