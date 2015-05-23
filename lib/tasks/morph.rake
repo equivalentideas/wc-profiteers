@@ -64,4 +64,7 @@ namespace :morph do
       end
     end
   end
+
+  desc "Update contractors then contracts from morph.io"
+  task :update_all => [:get_contractors, :get_contracts]
 end
