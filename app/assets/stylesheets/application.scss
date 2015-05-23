@@ -69,6 +69,10 @@ ul {
   font-size: 1em;
   width: 70%;
   float: left;
+
+  @media (min-width: 50em) {
+    font-size: 1.105263158em;
+  }
 }
 
 .contractor-value {
