@@ -8,8 +8,9 @@
       %header
         %h2.contractor-name= contractor.name
         %span.contractor-value= number_to_currency(contractor.total_est_contract_value, precision: 0)
-        - if contractor.website
-          %p= link_to simple_url(contractor.website), contractor.website, class: 'contractor-website'
+        .contractor-data
+          - if contractor.website
+            %p= link_to simple_url(contractor.website), contractor.website, class: 'contractor-website'
       %ul.contracts
         - contractor.contracts.each do |contract|
           %li.contract
