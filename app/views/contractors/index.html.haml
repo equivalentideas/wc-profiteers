@@ -15,7 +15,7 @@
         - contractor.contracts.each do |contract|
           %li.contract
             %p.contract-description
-              “#{link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")}”.
+              = link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")
             %dl.contract-data-list
               %dt Value:
               %dd.contract-value #{number_to_currency(contract.value, precision: 0)}
