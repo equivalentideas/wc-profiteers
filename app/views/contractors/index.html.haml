@@ -17,7 +17,7 @@
           - if contractor.abn
             %dl.item-data-group
               %dt ABN
-              %dd= contractor.abn
+              %dd= link_to contractor.abn, "http://www.abr.business.gov.au/SearchByAbn.aspx?SearchText=#{contractor.abn}", title: "Look this ABN up on the Australian Business Register."
           - if contractor.website
             %dl.item-data-group
               %dt Website
