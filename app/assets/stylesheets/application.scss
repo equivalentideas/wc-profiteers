@@ -93,10 +93,9 @@ ul {
 
 .contracts {
   font-size: .882em;
-  max-width: 35em;
 
   @media (min-width: 35em) {
-    margin-left: 4em;
+    margin: 0 6.5em 0 4em;
   }
 }
 
