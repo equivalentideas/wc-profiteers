@@ -106,13 +106,23 @@ ul {
   margin-bottom: 0;
 }
 
-.contract-data-list {
+.contract-data {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contract-data-group {
   margin: 0;
-  clear: both;
+  display: inline-block;
   font-size: .75em;
 
   @media (min-width: 35em) {
     font-size: .883em;
+    min-width: 9em;
+  }
+
+  .contract-data-group + & {
+    margin-left: .5em;
   }
 
   dt,
@@ -125,9 +135,5 @@ ul {
     font-size: .883em;
     text-transform: uppercase;
     color: #777;
-
-    dd + & {
-      margin-left: .25em;
-    }
   }
 }

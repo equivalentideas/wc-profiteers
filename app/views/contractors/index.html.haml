@@ -15,8 +15,10 @@
           %li.contract
             %p.contract-description
               = link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")
-            %dl.contract-data-list
-              %dt Value:
-              %dd.contract-value #{number_to_currency(contract.value, precision: 0)}
-              %dt Period:
-              %dd.contract-duration #{contract.start_date} – #{contract.end_date}
+            .contract-data
+              %dl.contract-data-group
+                %dt Value:
+                %dd.contract-value #{number_to_currency(contract.value, precision: 0)}
+              %dl.contract-data-group
+                %dt Period:
+                %dd.contract-duration #{contract.start_date} – #{contract.end_date}
