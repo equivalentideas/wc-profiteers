@@ -95,3 +95,35 @@ ul {
   font-size: .882em;
   max-width: 35em;
 }
+
+.contract {
+}
+
+.contract-description {
+  margin-bottom: 0;
+}
+
+.contract-data-list {
+  margin: 0;
+  clear: both;
+  font-size: .75em;
+
+  dt,
+  dd {
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  dt {
+    font-size: .883em;
+    text-transform: uppercase;
+
+    dd + & {
+      margin-left: .25em;
+    }
+  }
+
+  dd {
+    font-weight: bold;
+  }
+}
