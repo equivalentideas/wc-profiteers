@@ -13,7 +13,7 @@
           - if contractor.acn
             %dl.item-data-group
               %dt ACN
-              %dd= contractor.acn
+              %dd= link_to contractor.acn, "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/panelSearch.jspx?searchType=OrgAndBusNm&searchText=#{contractor.acn}", title: "View record on the ASIC website."
           - if contractor.abn
             %dl.item-data-group
               %dt ABN
