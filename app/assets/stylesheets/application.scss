@@ -112,6 +112,10 @@ ul {
   clear: both;
   font-size: .75em;
 
+  @media (min-width: 35em) {
+    font-size: .883em;
+  }
+
   dt,
   dd {
     display: inline-block;
