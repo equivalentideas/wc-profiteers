@@ -47,6 +47,15 @@ ul {
 .item-data {
   display: flex;
   justify-content: flex-start;
+  clear: both;
+
+  .contractor & {
+    font-size: .882em;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .item-data-group {
@@ -111,11 +120,6 @@ ul {
   margin: .2em 0 0;
   font-size: .882em;
   float: right;
-}
-
-.contractor-data {
-  font-size: .882em;
-  clear: both;
 }
 
 .contract-counter {
