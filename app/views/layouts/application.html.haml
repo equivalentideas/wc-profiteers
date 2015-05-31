@@ -21,6 +21,12 @@
   %main.container
     = yield
   %footer.site-footer
+    .footer-credits
+      %p.container
+        This website uses data from
+        = link_to "morph.io", "https://morph.io"
+        and
+        = link_to "OpenCorporates", "https://opencorporates.com/"
     .footer-contact
       .container
         %p.contact-msg
