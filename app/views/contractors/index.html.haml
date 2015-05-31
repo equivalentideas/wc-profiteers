@@ -4,7 +4,7 @@
   So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
 %ul.contractors
   - @contractors.each do |contractor|
-    %li.contractor
+    %li.contractor{id: contractor.abn}
       %header
         %h2.contractor-name= contractor.name
         %span.contractor-value= number_to_currency(contractor.total_est_contract_value, precision: 0)
