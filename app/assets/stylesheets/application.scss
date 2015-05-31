@@ -1,20 +1,31 @@
 body {
-  margin: 0 auto;
-  padding: .5em 5%;
-  max-width: 45em;
+  margin: 0;
+  padding: 0;
   font-family: "jaf-facitweb", verdana, sans-serif;
   font-size: 1.0625em;
   line-height: 1.5;
   color: #252C2D;
   background: #FDFCFC;
 
+  @media (min-width: 55em) {
+    font-size: 1.1875em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: .5em 5%;
+  max-width: 45em;
+  display: block;
+}
+
+main.container {
   @media (min-width: 35em) {
     padding-top: 2em;
   }
 
   @media (min-width: 55em) {
     padding-top: 3em;
-    font-size: 1.1875em;
   }
 }
 
