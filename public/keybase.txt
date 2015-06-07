@@ -1,35 +1,35 @@
 ==================================================================
-https://keybase.io/wcprofiteers
+https://keybase.io/whywestconnex
 --------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am an admin of https://wc-profiteers.herokuapp.com
-  * I am wcprofiteers (https://keybase.io/wcprofiteers) on keybase.
-  * I have a public key with fingerprint 68DE C1D9 CEFE 29FC CCD8  4851 C563 7EA5 F782 4FB3
+  * I am an admin of https://whywestconnex.herokuapp.com
+  * I am whywestconnex (https://keybase.io/whywestconnex) on keybase.
+  * I have a public key with fingerprint 27F8 0DD0 0762 66E5 3AEF  E9E1 1217 68CC 4B66 3089
 
 To do so, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "68dec1d9cefe29fcccd84851c5637ea5f7824fb3",
+            "fingerprint": "27f80dd0076266e53aefe9e1121768cc4b663089",
             "host": "keybase.io",
-            "key_id": "c5637ea5f7824fb3",
-            "kid": "010121c5c16518accd0ea22ef476cf83b41be348fbf23320ee5d1314cb6c6d997e200a",
-            "uid": "0255dca5ed1ee0912bd5d2c81ef7cd19",
-            "username": "wcprofiteers"
+            "key_id": "121768cc4b663089",
+            "kid": "0101e0135b2b93515617894d8202feb8829774c618971acc81846bb3b758696e5f010a",
+            "uid": "5a1700edc8bda4ca6eef10abcef29219",
+            "username": "whywestconnex"
         },
         "service": {
-            "hostname": "wc-profiteers.herokuapp.com",
+            "hostname": "whywestconnex.herokuapp.com",
             "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1433034034,
+    "ctime": 1433650295,
     "expire_in": 157680000,
-    "prev": "461d7c2322457955c81fe0d33937973879c319f30b84602ccb362512ec383b65",
+    "prev": "b85b24929fd01caa4360f41f0d1baad4c43e5eae54cd789c16badf8c2bc9eedd",
     "seqno": 2,
     "tag": "signature"
 }
@@ -40,29 +40,29 @@ which yields the signature:
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-owFtkltIVEEYgHez61JUhEU3iZNilMqZmXPdwoiK6EJCqBlR2zlz/rN72txz9uxZ
-LcpLPVg+BBFBREFG1FNUZGmCRHSXyvAhUslcqgdLKEK6bVDNsdtLw8Aw83//N/P/
-zJEpOYFQ8C6tP/f5QFlr8OEbPVCxc9vKvZxuG3u48F4uDqOLaSWi4DqulfC4MCcp
-BlBkqBRMwKpJKTUUQRERFSUigyaasoIFUydcERezU34G0+haCkosm52xTcQy2Ol/
-+PhogEc8wkxHkSQiRWN+HjSMwRRkiZoK0QWkAxEUUzcxIZgHEA1EkEB1iUqGqsqA
-eV5juvQvHRZFg2oiGAiAVxHWDdHAVEFgytRAqg+mwE1o1cDoWuq4tml5AG6Kqyvi
-WKTGouC3wa/mL1X8DyuJgWvH05rjlFC7mulYyLOpvYuBMc9zUmFf5O1xRjNBj/x2
-RnQrYbDWsowaprHsBBdGjKSe5V+CBEJ4IrBZxMFux3IhYvmEKEsKz4Z/D9QwpSAh
-Q6aYYCyIsiqKrDQTeIMQlciqTBRZpQSpJuF1RZB4TKlOJCwiDJSwZkoi51eZTNhc
-OBezd2pR5kxZ0YTmpV3g6kLNwXljA8FQYPy4Mf73CIQmTfvzZ0aeTwyceoRaM3RT
-y4crhZm8RdfW/ujIljoL7z1NH24p7jiWT5PdL09OLRyWCsKVDV7f4wsvh1G4fnZ+
-ecetL9lVRfMuFUzfmnszdqXsVt3SB43xkdba+NDI0OWzsZ1zv3XtujuzZV15utgc
-rhxoudh5WmlsvzYwafmSLjzjYO/t+3n9W98dqV02Z8W+QbtJbpq6I9uWRh08nDm5
-hoOmr+c2X9cWXM2Jx/dXns/mP9m4uieTdfOfNSc3vi3cbrd13dmQ6S/tW7X+UjTn
-PfS++vR6lvtWSvRs6W6f/LV5nfPhe2bC4lknCt4cvjGUPLq+fv7NwUNt3Z+SnR9f
-hKoiFaGChkXHq143/AQ=
-=QYyu
+owFtkmtIFUEUx++tNLtlZUXvLy6lmSYz+95baqEIdiWSlFKr28zsrHdTd2+7V03E
+yorAF6a9oAcRBT1JyBQq6oOERGVPsKi+FPSmoqKgoses1LfmyzDn/M/vnPNndiaO
+9AX8k6ZFboYM0Oy/8Rr7StyrLQ0ctvV6LtjAVdLhyzCtCupEHdOKcUGOVwwV6DoA
+iszLMpUERA2qUQh5qMgqISKWZQGoGpfBRWzXq2AYjFyaadosxh5hU2fR/+grhxMA
+AkgBFCTMY02QoCRDRdVEXeUBb1CsqrymKCKRoaopEBGiQlWUMRawIqmyxiYyGAEx
+XM0wTkJQAYDqRMU6EgmSKTVYHhNq8BoPvb41LnUsVE2Zui5SX0fdGLEti27kGjM4
+lqo1CfV88Nb5nywzQh27sgZFo5nErma8qGPHbGJXMWEkFou6QQ8Uq48OV1Ic/ssM
+Y9PSmbesopY6rmlbXBAyJYmZXhMoCoIsAV6TMji6MWo6NGx6ConZBtjx+tBahsQq
+s0rUeM3QASQIiYIMDBEaQIcYIV0kokAliqgkEp05SaCMkW6ohMdEo1TXOW/LDZbN
+TQ3ybE5UwZiuWWGhWI1DucZAs3/2KJ8/4IuPG+H9D19gzMR/nyYQGP27tGAQ7l+S
+lz8zaen9hs6yb1es8aWbb9sdCdmbnqy507R2TmrJ1Uu5H9vegE6r4MXC9mM50859
+GPxyM63FbD87p6l12ayhcPF0/7qiU+nfbrwty27bmnLufGDvjq5fy8u7QSR9Pnc6
+bqAs5+m95BljHxworOrO2vJy262ne25fryO9+RMSP5Um9F6eefFuHu5bX1ldVyyu
+eBDqGXIWrfx88CX3ako/nt4Uujdv8erdXX0LHh7PaT6R+6vi7OTn+NHaopTQ4M/+
+nqST49a/rioUVXPK5yOHS/c97nj3tWjVhUBXeWr80Pe5H91dp0OdC8+kHC1ouLY9
+7dmG5PBQ64uBUTNaE9//ODQ26w8=
+=AY+j
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/wcprofiteers
+View my publicly-auditable identity here: https://keybase.io/whywestconnex
 
 ==================================================================
 
