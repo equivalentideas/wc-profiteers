@@ -1,14 +1,15 @@
-%h1 Who profits from WestConnex?
-%p.lede
-  These #{@contractors.count} companies have been contracted by the NSW Government.
-  So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
-%ul.contractors
-  = render @contractors
-%section.history#history
-  %h2 Recent changes
-  %ul.updates-list
-    - @last_two_weeks.each do |day|
-      - if !@contractor_history.where("created_at::timestamp::date = ?", day).empty?
-        %li
-          %h3= day.strftime("%b %-d")
-          = new_contractors_sentence(@contractor_history.where("created_at::timestamp::date = ?", day))
+%main.container
+  %h1 Who profits from WestConnex?
+  %p.lede
+    These #{@contractors.count} companies have been contracted by the NSW Government.
+    So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
+  %ul.contractors
+    = render @contractors
+  %section.history#history
+    %h2 Recent changes
+    %ul.updates-list
+      - @last_two_weeks.each do |day|
+        - if !@contractor_history.where("created_at::timestamp::date = ?", day).empty?
+          %li
+            %h3= day.strftime("%b %-d")
+            = new_contractors_sentence(@contractor_history.where("created_at::timestamp::date = ?", day))

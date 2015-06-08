@@ -18,8 +18,7 @@
     :javascript
       try{Typekit.load();}catch(e){}
   %body
-    %main.container
-      = yield
+    = yield
     = render "shared/site_footer"
     :javascript
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
