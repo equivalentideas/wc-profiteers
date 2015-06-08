@@ -5,7 +5,8 @@
     So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}.
   %ul.contractors
     = render @contractors
-  %section.history#history
+%section.history#history
+  %div.container
     %h2 Recent changes
     %ul.updates-list
       - @last_two_weeks.each do |day|
