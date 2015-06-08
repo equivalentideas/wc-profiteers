@@ -1,0 +1,30 @@
+%li.contractor{id: contractor.abn}
+  %header
+    %h2.contractor-name= contractor.name
+    %span.contractor-value= number_to_currency(contractor.total_est_contract_value, precision: 0)
+    .item-data
+      - # TODO change to generic item data group class
+      - if contractor.acn
+        %dl.item-data-group
+          %dt ACN
+          %dd= link_to contractor.acn, "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/panelSearch.jspx?searchType=OrgAndBusNm&searchText=#{contractor.acn}", title: "View record on the ASIC website."
+      - if contractor.abn
+        %dl.item-data-group
+          %dt ABN
+          %dd= link_to contractor.abn, "http://www.abr.business.gov.au/SearchByAbn.aspx?SearchText=#{contractor.abn}", title: "Look this ABN up on the Australian Business Register."
+      - if contractor.website
+        %dl.item-data-group
+          %dt Website
+          %dd= link_to simple_url(contractor.website), contractor.website, class: 'contractor-website'
+  %ul.contracts
+    - contractor.contracts.each do |contract|
+      %li.contract
+        %p.contract-description
+          = link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")
+        .item-data
+          %dl.item-data-group
+            %dt Value:
+            %dd.contract-value #{number_to_currency(contract.value, precision: 0)}
+          %dl.item-data-group
+            %dt Period:
+            %dd.contract-duration #{contract.start_date} – #{contract.end_date}
