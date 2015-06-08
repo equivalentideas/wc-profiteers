@@ -30,10 +30,18 @@ main.container {
   }
 }
 
+.site-footer {
+  background-color: #032630;
+  color: #eee;
+
+  a {
+    color: #eee;
+  }
+}
+
 .footer-credits {
   border-top: 1px solid lighten(#032630, 5%);
   font-size: .882em;
-  background-color: #032630;
   color: #aaa;
 
   a {
@@ -43,12 +51,6 @@ main.container {
 
 .footer-contact {
   padding: 1em 0 1em;
-  background-color: #032630;
-  color: #eee;
-
-  a {
-    color: #eee;
-  }
 }
 
 .contact-msg a {
