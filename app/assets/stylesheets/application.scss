@@ -34,6 +34,10 @@ main.container {
   color: #50472F;
   background-color: #F6ECD0;
 
+  a {
+    color: lighten(#50472F, 5%);
+  }
+
   h2,
   h3 {
     font-size: 1em;
