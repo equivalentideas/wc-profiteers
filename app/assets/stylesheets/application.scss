@@ -31,6 +31,7 @@ main.container {
 }
 
 .history {
+  padding: .5em 0 .75em;
   color: #50472F;
   background-color: #F6ECD0;
 
@@ -105,8 +106,13 @@ li {
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style: none;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 .lede {
@@ -157,6 +163,10 @@ ul {
     text-transform: uppercase;
     color: #777;
   }
+}
+
+.contractors {
+  margin-bottom: 2.5em;
 }
 
 .contractor {
