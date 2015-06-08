@@ -24,16 +24,19 @@ describe ContractorsHelper do
     context "There is one new contractor" do
       let(:versions) {[version1]}
       it { expect(helper.new_contractors_sentence(versions)).to eq "1 new contractor <em>Foo Company</em> added."}
+      it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
 
     context "There are two new contractors" do
       let(:versions) {[version1, version2]}
       it { expect(helper.new_contractors_sentence(versions)).to eq "2 new contractors <em>Foo Company</em> and <em>Bar Company</em> added."}
+      it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
 
     context "There are three new contractors" do
       let(:versions) {[version1, version2, version3]}
       it { expect(helper.new_contractors_sentence(versions)).to eq "3 new contractors <em>Foo Company</em>, <em>Bar Company</em>, and <em>Wiz Company</em> added."}
+      it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
   end
 end
