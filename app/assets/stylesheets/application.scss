@@ -38,6 +38,13 @@ main.container {
 
   a {
     color: darken(#50472F, 15%);
+
+    &:hover,
+    &:focus {
+      color: darken(#50472F, 20%);
+      background-color: lighten(#F6ECD0, 10%);
+      text-decoration: none;
+    }
   }
 
   h2,
