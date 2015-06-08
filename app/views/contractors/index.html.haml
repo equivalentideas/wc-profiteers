@@ -13,5 +13,5 @@
         - if !@contractor_history.where("created_at::timestamp::date = ?", day).empty?
           %li
             %h3= day.strftime("%b %-d")
-            = new_contractors_sentence(@contractor_history.where("created_at::timestamp::date = ?", day))
+            %p= new_contractors_sentence(@contractor_history.where("created_at::timestamp::date = ?", day))
             %p= new_contracts_sentence(@contract_history.where("created_at::timestamp::date = ?", day))
