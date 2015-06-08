@@ -43,11 +43,15 @@ main.container {
   h2,
   h3 {
     font-size: 1em;
+  }
+
+  h2 {
     font-weight: normal;
   }
 
   h3 {
     margin-bottom: 0;
+    font-weight: bold;
   }
 }
 
