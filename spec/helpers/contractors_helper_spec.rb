@@ -13,11 +13,11 @@ describe ContractorsHelper do
     it { expect(helper.simple_url("http://example.com/foo/bar.php")).to eq "example.com" }
   end
 
-  describe '#contractor_link_by_id' do
+  describe '#link_to_contractor_by_id' do
     let!(:contractor) { Contractor.create id: 1, name: "Foo Company", abn: "123" }
     id = 1
-    it { expect(helper.contractor_link_by_id(id)).to eq '<a href="#123">Foo Company</a>' }
-    it { expect(helper.contractor_link_by_id(id)).to be_html_safe }
+    it { expect(helper.link_to_contractor_by_id(id)).to eq '<a href="#123">Foo Company</a>' }
+    it { expect(helper.link_to_contractor_by_id(id)).to be_html_safe }
   end
 
   describe "#new_contractors_sentence" do
