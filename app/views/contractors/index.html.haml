@@ -35,7 +35,7 @@
                 %dt Period:
                 %dd.contract-duration #{contract.start_date} – #{contract.end_date}
 %section.history
-  %h2#history
+  %h2#history Recent changes
   %ul.updates-list
     - @last_two_weeks.each do |day|
       - if !@contractor_history.where("created_at::timestamp::date = ?", day).empty?
