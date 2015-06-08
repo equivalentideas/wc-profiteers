@@ -5,6 +5,6 @@ module ContractorsHelper
 
   def new_contractors_sentence(create_versions)
     contractors = create_versions.map {|v| content_tag(:em, h(Contractor.find(v.item_id).name))}
-    return "#{pluralize(contractors.count, 'new contractor')} #{contractors.to_sentence} added.".html_safe
+    return "#{'New contractor'.pluralize(contractors.count)} #{contractors.to_sentence} added.".html_safe
   end
 end
