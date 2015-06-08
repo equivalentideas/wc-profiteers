@@ -18,7 +18,7 @@
           %dd= link_to simple_url(contractor.website), contractor.website, class: 'contractor-website'
   %ul.contracts
     - contractor.contracts.each do |contract|
-      %li.contract
+      %li.contract{id: contract.can_id}
         %p.contract-description
           = link_to(contract.description, contract.url, title: "View the contract listing at tenders.gov.nsw")
         .item-data
