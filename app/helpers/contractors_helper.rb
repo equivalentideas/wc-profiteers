@@ -9,6 +9,6 @@ module ContractorsHelper
 
   def new_contractors_sentence(create_versions)
     contractors = create_versions.map {|v| link_to_contractor_by_id(v.item_id)}
-    return "#{'New contractor'.pluralize(contractors.count)} #{contractors.to_sentence} added.".html_safe
+    return "#{'New contractor'.pluralize(contractors.count)}: #{contractors.to_sentence}.".html_safe
   end
 end

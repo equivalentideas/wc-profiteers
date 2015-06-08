@@ -30,19 +30,19 @@ describe ContractorsHelper do
 
     context "There is one new contractor" do
       let(:versions) {[version1]}
-      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractor <a href="#123">Foo Company</a> added.'}
+      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractor: <a href="#123">Foo Company</a>.'}
       it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
 
     context "There are two new contractors" do
       let(:versions) {[version1, version2]}
-      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractors <a href="#123">Foo Company</a> and <a href="#456">Bar Company</a> added.'}
+      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractors: <a href="#123">Foo Company</a> and <a href="#456">Bar Company</a>.'}
       it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
 
     context "There are three new contractors" do
       let(:versions) {[version1, version2, version3]}
-      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractors <a href="#123">Foo Company</a>, <a href="#456">Bar Company</a>, and <a href="#789">Wiz Company</a> added.'}
+      it { expect(helper.new_contractors_sentence(versions)).to eq 'New contractors: <a href="#123">Foo Company</a>, <a href="#456">Bar Company</a>, and <a href="#789">Wiz Company</a>.'}
       it { expect(helper.new_contractors_sentence(versions)).to be_html_safe}
     end
   end
