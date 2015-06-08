@@ -16,7 +16,7 @@
             = new_contractors_sentence(@contractor_history.where("created_at::timestamp::date = ?", day))
             %p
               New contracts
-              = link_to "WestConnex - Site Survey for Sydney Gateway, Stage 2", ""
+              = link_to_contract_by_id(88)
               and
-              = link_to "WestConnex - Stage 2, Construction Power Supply Study & Design", ""
+              = link_to_contract_by_id(87)
               added.
