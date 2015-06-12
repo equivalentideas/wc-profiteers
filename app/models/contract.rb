@@ -1,5 +1,5 @@
 class Contract < ActiveRecord::Base
-  has_paper_trail
+  has_paper_trail :ignore => [:date_scraped, :updated_at]
 
   belongs_to :contractor
 
