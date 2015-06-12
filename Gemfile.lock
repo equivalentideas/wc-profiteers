@@ -41,6 +41,8 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    by_star (2.2.1)
+      activesupport
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -240,6 +242,7 @@ DEPENDENCIES
   autoprefixer-rails (~> 5.1.11)
   better_errors
   binding_of_caller
+  by_star (~> 2.2.1)
   coffee-rails (~> 4.0.0)
   dotenv-rails
   growl

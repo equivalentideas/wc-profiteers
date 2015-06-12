@@ -28,6 +28,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'paper_trail', '~> 4.0.0.rc'
 
+gem 'by_star', '~> 2.2.1'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
