@@ -30,6 +30,8 @@ gem 'paper_trail', '~> 4.0.0.rc'
 
 gem 'by_star', '~> 2.2.1'
 
+gem 'dateslices'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
