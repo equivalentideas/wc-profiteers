@@ -9,7 +9,7 @@
   %div.container
     %h2 Recent changes
     %ul.updates-list
-      - @last_two_weeks.each do |day|
+      - @days_with_changes.each do |day|
         - if !@contractor_history.by_day(day).empty?
           %li
             %h3= day.strftime("%b %-d")

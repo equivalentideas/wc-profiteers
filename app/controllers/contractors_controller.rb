@@ -3,6 +3,6 @@ class ContractorsController < ApplicationController
     @contractors = Contractor.all.sort { |a, b| b.total_est_contract_value <=> a.total_est_contract_value }
     @contractor_history = PaperTrail::Version.where("created_at > ? and item_type = ? and event = ?", 2.week.ago, "Contractor", "create")
     @contract_history = PaperTrail::Version.where("created_at > ? and item_type = ? and event = ?", 2.week.ago, "Contract", "create")
-    @last_two_weeks = (2.weeks.ago.to_date..Date.today).to_a.reverse
+    @days_with_changes = PaperTrail::Version.group_by_day(:created_at).keys.map{|k| k.to_date}.reverse
   end
 end
