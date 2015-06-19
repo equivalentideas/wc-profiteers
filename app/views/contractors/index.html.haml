@@ -10,8 +10,7 @@
     %h2 Recent changes
     %ul.updates-list
       - @days_with_changes.each do |day|
-        - if !@contractor_history.by_day(day).empty?
-          %li
-            %h3= day.strftime("%b %-d")
-            %p= new_contractors_sentence(@contractor_history.by_day(day))
-            %p= new_contracts_sentence(@contract_history.by_day(day))
+        %li
+          %h3= day.strftime("%b %-d")
+          %p= new_contractors_sentence(@contractor_history.by_day(day))
+          %p= new_contracts_sentence(@contract_history.by_day(day))
