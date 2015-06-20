@@ -10,8 +10,8 @@ class Contract < ActiveRecord::Base
   def display_description
     if description =~ /^westconnex - /i
       description.gsub(/^westconnex - /i, '')
-    elsif description[0..5] == 'WDA - '
-      description.sub('WDA - ', '')
+    elsif description =~ /^WDA - /
+      description.sub(/^WDA - /, '')
     else
       description
     end
