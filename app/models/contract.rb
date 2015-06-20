@@ -8,12 +8,6 @@ class Contract < ActiveRecord::Base
   default_scope {order('start_date DESC')}
 
   def display_description
-    if description =~ /^westconnex - /i
-      description.gsub(/^westconnex - /i, '')
-    elsif description =~ /^WDA - /
-      description.sub(/^WDA - /, '')
-    else
-      description
-    end
+    description.gsub(/^westconnex - /i, '').sub(/^WDA - /, '')
   end
 end
