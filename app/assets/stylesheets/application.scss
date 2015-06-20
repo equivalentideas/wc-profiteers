@@ -197,7 +197,8 @@ li:target {
   }
 
   header {
-    overflow: auto; // clearfix
+    display: flex;
+    justify-content: space-between;
 
     h2 {
       margin: 0;
@@ -212,8 +213,7 @@ li:target {
 
 .contractor-name {
   font-size: 1em;
-  width: 70%;
-  float: left;
+  width: 63%;
 
   @media (min-width: 50em) {
     font-size: 1.105263158em;
@@ -223,7 +223,6 @@ li:target {
 .contractor-value {
   margin: .2em 0 0;
   font-size: .882em;
-  float: right;
 }
 
 .contract-counter {
