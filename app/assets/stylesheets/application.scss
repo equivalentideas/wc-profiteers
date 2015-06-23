@@ -7,7 +7,12 @@ body {
   color: #252C2D;
   background: #FDFCFC;
 
+  @media (min-width: 35em) {
+    padding-top: 2em;
+  }
+
   @media (min-width: 55em) {
+    padding-top: 3em;
     font-size: 1.1875em;
   }
 }
@@ -18,16 +23,6 @@ body {
   max-width: 855px;
   max-width: 53.4375rem;
   display: block;
-}
-
-main.container {
-  @media (min-width: 35em) {
-    padding-top: 2em;
-  }
-
-  @media (min-width: 55em) {
-    padding-top: 3em;
-  }
 }
 
 .history {
