@@ -192,6 +192,9 @@ li:target {
 }
 
 .contractor {
+  border-top: .3em #333 solid;
+  padding-top: .2em;
+
   @media (min-width: 40em) {
     margin-bottom: 2.5em;
   }
