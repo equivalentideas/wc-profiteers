@@ -140,6 +140,11 @@ li:target {
   }
 }
 
+.note-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .item-data {
   display: flex;
   justify-content: flex-start;
