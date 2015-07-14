@@ -3,7 +3,7 @@
   %p.lede
     These #{@contractors.count} companies have been contracted by the NSW Government.
     So far, their #{pluralize(Contract.count, "contracts")} are worth
-    #{number_to_currency(Contract.sum(:value), precision: 0)}.#{link_to '*', '#limitations', title: 'This information in limited, find out more.'}
+    #{number_to_currency(Contract.sum(:value), precision: 0)}.#{link_to '*', '#limitations', title: 'There are major limitations to the information here, find out more.'}
 
 %main.container
   %ul.contractors
