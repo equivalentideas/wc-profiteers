@@ -15,11 +15,10 @@
       %dl.item-data-group
         %dt Website
         %dd= link_to simple_url(contractor.website), contractor.website, class: 'contractor-website'
-  %p.item-description
-    - # TODO: Make this static prototype dynamic
-    #{contractor.name} is an Australian subsiderary of internalational Foo Corp Group.
-    They have been awarded $150m worth of contracts on federal defence projects since 2007.
-    Read more at #{link_to "Crikey.com", ""}  and #{link_to "NewMatilda.com", ""}.
+  - if contractor.description
+    .item-description
+      :markdown
+        #{contractor.description}
   %ul.contracts
     - contractor.contracts.each do |contract|
       %li.contract{id: contract.can_id}
