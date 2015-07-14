@@ -32,6 +32,8 @@ gem 'by_star', '~> 2.2.1'
 
 gem 'dateslices'
 
+gem 'redcarpet'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
