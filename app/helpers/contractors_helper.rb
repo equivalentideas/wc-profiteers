@@ -4,7 +4,7 @@ module ContractorsHelper
   end
 
   def link_to_contractor_by_id(id)
-    link_to(h(Contractor.find(id).name), "##{h(Contractor.find(id).abn)}")
+    link_to(h(Contractor.find(id).name), "##{h(Contractor.find(id).corporate_id)}")
   end
 
   def new_contractors_sentence(create_versions)
