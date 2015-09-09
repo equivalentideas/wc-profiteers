@@ -40,6 +40,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'wirble'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false
