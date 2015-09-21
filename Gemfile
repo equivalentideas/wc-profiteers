@@ -34,6 +34,10 @@ gem 'dateslices'
 
 gem 'redcarpet'
 
+group :test do
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'dotenv-rails'
