@@ -79,9 +79,9 @@ describe Contractor do
 
       it "creates new contractors if we don’t have them already" do
         expect(
-          Contractor.find_by(abn: new_contractor[:abn]).acn
+          Contractor.find_by(abn: new_contractor[:abn]).abn
         )
-        .to eq new_contractor[:acn]
+        .to eq new_contractor[:abn]
       end
     end
   end
