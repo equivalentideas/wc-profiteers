@@ -8,10 +8,7 @@ class Contractor < ActiveRecord::Base
 
   def self.import_contractors_from_csv(csv_path)
     require 'CSV'
-    csv = CSV.parse(
-      File.read(csv_path),
-      headers: true
-    )
+    csv = CSV.parse(File.read(csv_path), headers: true)
 
     csv.each do |row|
       if Contractor.find_by(abn: row["abn"]).nil?
