@@ -47,9 +47,7 @@ describe Contractor do
 
   describe '.import_contractors_from_csv' do
     before :each do
-      csv_path = 'spec/csv_examples/contractors.csv'
-
-      Contractor.import_contractors_from_csv(csv_path)
+      Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv')
     end
 
     context "when csv includes an existing contractor" do
