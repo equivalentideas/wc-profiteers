@@ -1,6 +1,35 @@
 require 'rails_helper'
 
 describe Contractor do
+  describe '.import_contractors_from_morph' do
+    context 'when there is a new contractor' do
+      it 'creates a new contractor' do
+        VCR.use_cassette('morph_requests') do
+          Contractor.import_contractors_from_morph
+        end
+
+        expect(Contractor.find_by(abn: '12345678901').abn).to eq '12345678901'
+      end
+    end
+
+    context 'when there is an existing contractor' do
+      before :each do
+        create(:contractor, abn: '12345678901', updated_at: 7.days.ago)
+      end
+
+      it 'updates it' do
+        VCR.use_cassette('morph_requests') do
+          Contractor.import_contractors_from_morph
+        end
+
+        expect(Contractor.find_by(abn: '12345678901').updated_at.to_date)
+          .to_not eq 7.days.ago.to_date
+        expect(Contractor.find_by(abn: '12345678901').updated_at.to_date)
+          .to eq Date.today
+      end
+    end
+  end
+
   describe '.import_contractors_from_csv' do
     context 'when csv includes a new contractor' do
       before { Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv') }

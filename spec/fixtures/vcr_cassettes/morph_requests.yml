@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20*%20from%20'contractors'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 5656195e-6f06-4910-acb6-d7f89b1725db
+      Etag:
+      - '"c7fdb9179e1e90eb14ce6ea7d0fd2f6d"'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.028522'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Sat, 10 Oct 2015 05:38:17 GMT
+      Set-Cookie:
+      - _morph_session=ck5TMEtLeFFITDNGNTJabitYNTZKQmM3QVNlYXNjQVFZTWxhYUlCbzF3YUR1S3NDcS9XSUJ4bk5hS0wvSzI4Zi9Pdmgrc2Erck55SURBOHZWczZpbHQrVTgvbktBVG40ZzJBWC9vVEN2c2FtK1Rac3gxTE1FOExnRUZ0UVFQSE0zNndsVHpwc21Yd21VYWFtSEgyRGdzdkRKeEFsL0hVR3FEQnovREhnckF5ck1oNFRlR2FIcHc5aW5YR3MyaVZIUGpnbVhWc1dFUzQ4NFdPeEt0YjRnNzBNY0tvTFFOaEdFcStEdjV0bUNJZDJWN0JkaE5STzJCKytQZTlXWG45aDNqZWQ2WlVteDVrK1h6dkQrUjdOMkE9PS0tcWxWcjJRNUxtMlRMZjRGaVlLdy9EUT09--82c6ebb6ee5aa0e328317abb8cd944cd74c44f6b;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.0.20
+      Server:
+      - nginx/1.8.0 + Phusion Passenger 5.0.20
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Foo Company","abn":"12345678901","acn":"123456789"}]'
+    http_version: 
+  recorded_at: Sat, 10 Oct 2015 05:38:30 GMT
+recorded_with: VCR 2.5.0

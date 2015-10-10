@@ -6,6 +6,26 @@ class Contractor < ActiveRecord::Base
   validates :name, :abn, presence: true
   validates :abn, uniqueness: true
 
+  def self.import_contractors_from_morph
+    require 'open-uri'
+
+    url = "https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=#{ENV['MORPH_SECRET_KEY']}&query=select%20*%20from%20'contractors'"
+    contractors = JSON.parse(open(url).read)
+
+    contractors.each do |c|
+      Contractor.where(abn: c["abn"]).first_or_initialize.update!(
+        abn: c["abn"],
+        name: c["name"],
+        acn: c["acn"],
+        street_adress: c["street_address"],
+        city: c["city"],
+        state: c["state"],
+        postcode: c["postcode"],
+        country: c["country"]
+      )
+    end
+  end
+
   def self.import_contractors_from_csv(csv_path)
     require 'CSV'
     csv = CSV.parse(File.read(csv_path), headers: true)
