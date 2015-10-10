@@ -15,7 +15,7 @@ describe Contract do
     end
 
     context 'when there is an existing contract' do
-      it 'creates a new contract' do
+      it 'updates it' do
         create(:contractor, abn: '12345678901', id: 1)
         create(:contract, can_id: '123', updated_at: 7.days.ago, contractor_id: 1)
 
