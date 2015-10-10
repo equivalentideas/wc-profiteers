@@ -3,4 +3,9 @@ FactoryGirl.define do
     name "Foo Company"
     abn "123"
   end
+
+  factory :contract do
+    can_id '123'
+    contractor
+  end
 end
