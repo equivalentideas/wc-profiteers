@@ -51,29 +51,23 @@ describe Contractor do
     end
 
     context "when csv includes an existing contractor" do
-      before :each do
-        @old_contractor_abn = "456"
-        @old_contractor = create(
-                          :contractor,
-                          abn: @old_contractor_abn,
-                          updated_at: 7.days.ago
-                        )
-      end
+      let(:old_contractor_abn) { "456" }
+      let!(:old_contractor) { create(:contractor,
+                                     abn: old_contractor_abn,
+                                     updated_at: 7.days.ago) }
 
       it "doesn’t update the existing contractor" do
         expect(
-          Contractor.find_by(abn: @old_contractor_abn).updated_at
+          Contractor.find_by(abn: old_contractor_abn).updated_at
         )
-        .to eq @old_contractor.updated_at
+        .to eq old_contractor.updated_at
       end
     end
 
     context "when csv includes a contractor that isn't in the database" do
-      new_contractor = {
-        name: "Allens Linklaters",
-        abn: "21001295843",
-        acn: "001295843"
-      }
+      let(:new_contractor) { { name: "Allens Linklaters",
+                               abn: "21001295843",
+                               acn: "001295843" } }
 
       it "creates new contractors if we don’t have them already" do
         expect(
