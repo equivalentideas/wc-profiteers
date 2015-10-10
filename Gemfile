@@ -36,6 +36,8 @@ gem 'redcarpet'
 
 group :test do
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test do
