@@ -15,16 +15,6 @@ describe Contractor do
     end
   end
 
-  context 'has an ACN but no ABN' do
-    before :each do
-      @contractor.update acn: '456'
-    end
-
-    it '#corporate_id' do
-      expect(@contractor.corporate_id).to eq '456'
-    end
-  end
-
   context 'has an ACN and ABN' do
     before :each do
       @contractor.update abn: '123', acn: '456'
@@ -32,16 +22,6 @@ describe Contractor do
 
     it '#corporate_id' do
       expect(@contractor.corporate_id).to eq '456'
-    end
-  end
-
-  context 'has no ACN or ABN' do
-    before :each do
-      @contractor.update abn: nil, acn: nil
-    end
-
-    it '#corporate_id' do
-      expect(@contractor.corporate_id).to eq "no_corporate_id_#{@contractor.id}"
     end
   end
 

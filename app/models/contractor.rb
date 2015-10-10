@@ -28,10 +28,8 @@ class Contractor < ActiveRecord::Base
   def corporate_id
     if !acn.blank?
       acn
-    elsif !abn.blank?
-      abn
     else
-      "no_corporate_id_#{id}"
+      abn
     end
   end
 end
