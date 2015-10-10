@@ -9,14 +9,13 @@ class Contract < ActiveRecord::Base
 
   def self.import_contracts_from_morph(with_debug_output: nil)
     require 'open-uri'
-    # for each contractor
+
     Contractor.all.each do |contractor|
       url = "https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=#{ENV['MORPH_SECRET_KEY']}&query=select%20contracts%20from%20'contractors'%20where%20abn%3D'#{contractor.abn}'"
       JSON.parse(open(url).read)[0]["contracts"].split(", ").each do |c|
-        # go get the contract by id
         url = "https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=#{ENV['MORPH_SECRET_KEY']}&query=select%20*%20from%20'contracts'%20where%20contract_award_notice_id%3D'#{c}'"
         contract_data = JSON.parse(open(url).read)[0]
-        # add the contract and associate it with the contractor
+
         if with_debug_output
           puts "updating #{contract_data["contract_award_notice_id"]}"
         end
