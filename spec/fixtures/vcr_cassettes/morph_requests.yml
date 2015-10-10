@@ -54,4 +54,185 @@ http_interactions:
       string: '[{"name":"Foo Company","abn":"12345678901","acn":"123456789"}]'
     http_version: 
   recorded_at: Sat, 10 Oct 2015 05:38:30 GMT
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20contracts%20from%20'contractors'%20where%20abn='12345678901'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 921bcd2b-a734-4465-ae29-4b2cb5ff0c2d
+      Etag:
+      - '"75bd8701cc60ed3f88282bbb16717a8a"'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.046350'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Sat, 10 Oct 2015 09:14:03 GMT
+      Set-Cookie:
+      - _morph_session=SUx1YTVpdmpBVmZhVEl6UjBDdDZLdGNNYTBFYmNURktpL2xLd3lsZHRYV2s1SVg3UXZQSnc4N2d1YTJSTmVrK0dOcWF3QWJSNDdPaHNEbGYvVzkreE1ZZW04R3l2MW1TeEx3VVdwMDNBelM3eEJTaUUzVzhTMlJLT3R1TmEvb0c5N0R0emZhYW1XNnV4QlNBcnZ1elFnWjUwdGFYQnFOOTVUWmd0TU5qRWhXVHNBR0M2NUxEQ2NScFUySUxCTzBaT3p3aDJWckkvazByMkZQMFlBcjRFeDRjdU1XdlNvanFubHRuVHRFYTJick80bmFidXMvaWJsNEthWHpCb0Y3MW1FN0lpdXdvWHZoQ3djbklSN0p5STRKU0dPdzdxMzBveHhOVEhXektZeFdFMzRUYkJGTmk4QTEreXFtYUZwV1AtLXF6WVlBTmQxOGd0YjBKNVlmQkpBV3c9PQ%3D%3D--4bd39051b997ed4e93cbf1bb29bdf433d7f3af34;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.0.20
+      Server:
+      - nginx/1.8.0 + Phusion Passenger 5.0.20
+    body:
+      encoding: UTF-8
+      string: '[{"contracts":"123"}]'
+    http_version: 
+  recorded_at: Sat, 10 Oct 2015 09:14:15 GMT
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20*%20from%20'contracts'%20where%20contract_award_notice_id='123'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - c9f97fb8-38ea-4792-85e3-d2c54dbbabbb
+      Etag:
+      - '"2ab6663f62aee28e85dcb8468bacef60"'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.015947'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Sat, 10 Oct 2015 09:14:05 GMT
+      Set-Cookie:
+      - _morph_session=V053R2VWTWYzVWIrTnl4MGhnUjlrajlvMk54Z0cwZXZQelc4blVXaTZKcVE1d3ZqUXQwWTIvMzNYbTVrZVdHbGRydXZrYUxSWFIvRUllRjZ1cHhGbzY2elE5cjAyNFErVW1XbUt0QjVWN3A2dlVPS2JmdVFNRDNoWU1ZZllkdUowbnVhcFpmVmtZUnVMbnQ0aEE0dXJ5N3dwbzdPdVRrSjNodVpPM2drSThyaThUZ25YTDR5TW55VEc0ZEVWY0RBbkZFSTZYRyt3WmNMNXFFNXEyblkvWmY5Q3c4Z0pIVkZ1SlZQREVmcmx2enRXTkh5emU1RW1GZVlYWjkwYUZaR055YzQxZ3JuLzRGd3JvRWZEUy9EdWJlSnQzUnVla09QWUhkaGRudkF5Lyt6UFVhc0NuRGE1WWkvd2Y4Z09JbUg0UVdHQ0VXMHdaaWdlRm5WMzl1OGlBPT0tLVRWYmxiUTB1aXdaQVNGYmZXTElDa1E9PQ%3D%3D--3c5097172a899ac0608c37186c5d5b008e20042f;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.0.20
+      Server:
+      - nginx/1.8.0 + Phusion Passenger 5.0.20
+    body:
+      encoding: UTF-8
+      string: '[{"date_scraped":"2015-07-28", "contract_award_notice_id":"123", "publish_date":"2014-09-24",
+        "particulars_of_the_goods_or_services_to_be_provided_under_this_contract":"WDA
+        - Scheduling \u0026 Program Support Stages 1 - 3RMS Contract", "contract_start_date":"2014-06-04",
+        "contract_end_date":"2015-07-01", "contractor_name":"Aquenta Consulting Pty
+        Ltd", "acn":"007406840", "abn":"12345678901", "street_address":"Level 10 67
+        Albert Avenue", "town_or_city":"CHATSWOOD", "state_or_territory":"NSW", "postcode":"2067",
+        "country":"AUSTRALIA", "other_private_sector_entities_involved_in_with_an_interest_in_or_benefiting_from_this_contract":"Nil",
+        "contract_value_est":505485.2, "any_provisions_for_payment_to_the_contractor_for_operational_or_maintenance_services":"N/A",
+        "method_of_tendering":"Open", "description_of_any_provision_under_which_the_amount_payable_to_the_contractor_may_be_varied":"N/A",
+        "description_of_any_provisions_under_which_the_contract_may_be_renegotiated":"N/A",
+        "tender_evaluation_criteria":"1.  Value for money.\n2. Demonstrated appropriate
+        experience, expertise, skills, qualifications and availability of the nominated
+        Scheduling Consultant.\n3. Demonstration of clear understanding of the service
+        required.\n4. Demonstration of appropriate experience,expertise and skills
+        as an organisation.", "contract_contains_agency_piggyback_clause":"No", "name_of_sub_contractors":null,
+        "applicable_industrial_instruments":null, "location_of_work":null, "agency_contact":"awardcontractinformation_rau@rta.nsw.gov.au",
+        "agency_state_or_territory":"NSW", "agency_country":"AUSTRALIA", "email_address":"awardcontractinformation_rau@rta.nsw.gov.au",
+        "amended_contract_value_est":null, "agency_street_address":null, "agency_town_or_city":null,
+        "agency_postcode":null, "phone_number":null, "original_contract_duration":null,
+        "amended_contract_duration":null}]'
+    http_version: 
+  recorded_at: Sat, 10 Oct 2015 09:14:17 GMT
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20contracts%20from%20'contractors'%20where%20abn='123'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 157a1e06-ccce-4a91-956b-e67b3a61707f
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.014227'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Sat, 10 Oct 2015 11:16:01 GMT
+      Set-Cookie:
+      - _morph_session=K2htZ2p6RUFsVUhGWG92QmdQZm9LOFJuSmRhSVVwNDhpR29CTWk5QzNPUjYzajVablVrdS9VRnRhLzdYRzN2M3dHTlphb0dURXhTNHdPelVvcHhrKzlReEtWeWxFSlZvNHBIK3dXdmk2R2JZbDViTnprbEdmZ29UeWs2MHVYOGV6ZVM5TjhGQXBzNDYycWZ3MVU1ZXpSdG92OHIwNDROV1Jzc1FLN2YvUkU4cUQrejN2Q0xXUGRaRFBNcWZEQVQyUDJWV21OaWNkYlN3dVZhMUpHYlFYeTlIUWZhYm1XRHUxWXNqbmNrRVRTV2RkT3VsYm44OXNNaVJrbGpCM2Ftd092Z2VDeHBJejVQajlmVG0xbEY2S2REcWlEcFU0N1QyOTBFRkp2ZUZqOTA0WGk4dG5KQzRzLzc4UkEzRy9kK2wtLS9FNW4zS3U4MHpOSXpBM3l3RVhZMlE9PQ%3D%3D--9760794dc0725d85259689ff6d931c2ab5fe30e5;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.0.20
+      Server:
+      - nginx/1.8.0 + Phusion Passenger 5.0.20
+    body:
+      encoding: UTF-8
+      string: '[]'
+    http_version: 
+  recorded_at: Sat, 10 Oct 2015 11:16:14 GMT
 recorded_with: VCR 2.5.0
