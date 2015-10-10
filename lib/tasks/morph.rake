@@ -8,7 +8,7 @@ namespace :morph do
 
   desc "Get the contracts for each contractor"
   task :get_contracts => :environment do
-    Contract.import_contracts_from_morph
+    Contract.import_contracts_from_morph(with_debug_output: true)
   end
 
   desc "Update contractors then contracts from morph.io"

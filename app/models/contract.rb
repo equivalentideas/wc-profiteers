@@ -7,7 +7,7 @@ class Contract < ActiveRecord::Base
 
   default_scope {order('start_date DESC')}
 
-  def self.import_contracts_from_morph
+  def self.import_contracts_from_morph(with_debug_output: nil)
     require 'open-uri'
     # for each contractor
     Contractor.all.each do |contractor|
@@ -17,7 +17,10 @@ class Contract < ActiveRecord::Base
         url = "https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=#{ENV['MORPH_SECRET_KEY']}&query=select%20*%20from%20'contracts'%20where%20contract_award_notice_id%3D'#{c}'"
         contract_data = JSON.parse(open(url).read)[0]
         # add the contract and associate it with the contractor
-        p "updating #{contract_data["contract_award_notice_id"]}"
+        if with_debug_output
+          puts "updating #{contract_data["contract_award_notice_id"]}"
+        end
+
         # If there's an amended value, get that.
         if contract_data["amended_contract_value_est"] === nil
           v = contract_data["contract_value_est"]
