@@ -20,7 +20,7 @@ describe Contractor do
   end
 
   describe '.import_contractors_from_csv' do
-    context "when csv includes a contractor that isn't in the database" do
+    context "when csv includes a new contractor" do
       before { Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv') }
 
       it "creates new contractors if we don’t have them already" do
