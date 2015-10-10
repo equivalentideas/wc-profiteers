@@ -1,27 +1,21 @@
 require 'rails_helper'
 
 describe Contractor do
-  before :each do
-    @contractor = create(:contractor)
-  end
+  describe '#corporate_id' do
+    context 'when there is a contractor with an ABN but no ACN' do
+      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: nil) }
 
-  context 'has an ABN but no ACN' do
-    before :each do
-      @contractor.update abn: '123'
+      it 'is the ABN' do
+        expect(contractor.corporate_id).to eq '123'
+      end
     end
 
-    it '#corporate_id' do
-      expect(@contractor.corporate_id).to eq '123'
-    end
-  end
+    context 'when there is a contractor with an ACN and an ABN' do
+      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: '456') }
 
-  context 'has an ACN and ABN' do
-    before :each do
-      @contractor.update abn: '123', acn: '456'
-    end
-
-    it '#corporate_id' do
-      expect(@contractor.corporate_id).to eq '456'
+      it 'is the ACN' do
+        expect(contractor.corporate_id).to eq '456'
+      end
     end
   end
 
