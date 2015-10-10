@@ -6,6 +6,5 @@ FactoryGirl.define do
 
   factory :contract do
     can_id '123'
-    contractor
   end
 end
