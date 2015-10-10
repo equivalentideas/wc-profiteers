@@ -20,34 +20,27 @@ describe Contractor do
   end
 
   describe '.import_contractors_from_csv' do
-    before :each do
-      Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv')
-    end
+    context "when csv includes a contractor that isn't in the database" do
+      before { Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv') }
 
-    context "when csv includes an existing contractor" do
-      let(:old_contractor_abn) { "456" }
-      let!(:old_contractor) { create(:contractor,
-                                     abn: old_contractor_abn,
-                                     updated_at: 7.days.ago) }
+      it "creates new contractors if we don’t have them already" do
+        new_contractor_abn = '1234567890'
 
-      it "doesn’t update the existing contractor" do
-        expect(
-          Contractor.find_by(abn: old_contractor_abn).updated_at
-        )
-        .to eq old_contractor.updated_at
+        expect(Contractor.find_by(abn: new_contractor_abn).abn).to eq new_contractor_abn
       end
     end
 
-    context "when csv includes a contractor that isn't in the database" do
-      let(:new_contractor) { { name: "Allens Linklaters",
-                               abn: "21001295843",
-                               acn: "001295843" } }
+    context "when csv includes an existing contractor" do
+      before :each do
+        @old_contractor_abn = '1234567890'
+        create(:contractor, abn: @old_contractor_abn, updated_at: 7.days.ago)
 
-      it "creates new contractors if we don’t have them already" do
-        expect(
-          Contractor.find_by(abn: new_contractor[:abn]).abn
-        )
-        .to eq new_contractor[:abn]
+        Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv')
+      end
+
+      it "doesn’t update the existing contractor" do
+        expect(Contractor.find_by(abn: @old_contractor_abn).updated_at.to_date)
+          .to eq 7.days.ago.to_date
       end
     end
   end
