@@ -26,7 +26,7 @@ class Contractor < ActiveRecord::Base
   end
 
   def corporate_id
-    if !acn.blank?
+    if acn.present?
       acn
     else
       abn
