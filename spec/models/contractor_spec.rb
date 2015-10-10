@@ -1,24 +1,6 @@
 require 'rails_helper'
 
 describe Contractor do
-  describe '#corporate_id' do
-    context 'when there is a contractor with an ABN but no ACN' do
-      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: nil) }
-
-      it 'is the ABN' do
-        expect(contractor.corporate_id).to eq '123'
-      end
-    end
-
-    context 'when there is a contractor with an ACN and an ABN' do
-      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: '456') }
-
-      it 'is the ACN' do
-        expect(contractor.corporate_id).to eq '456'
-      end
-    end
-  end
-
   describe '.import_contractors_from_csv' do
     context 'when csv includes a new contractor' do
       before { Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv') }
@@ -41,6 +23,24 @@ describe Contractor do
       it 'doesn’t update the existing contractor' do
         expect(Contractor.find_by(abn: @old_contractor_abn).updated_at.to_date)
           .to eq 7.days.ago.to_date
+      end
+    end
+  end
+
+  describe '#corporate_id' do
+    context 'when there is a contractor with an ABN but no ACN' do
+      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: nil) }
+
+      it 'is the ABN' do
+        expect(contractor.corporate_id).to eq '123'
+      end
+    end
+
+    context 'when there is a contractor with an ACN and an ABN' do
+      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: '456') }
+
+      it 'is the ACN' do
+        expect(contractor.corporate_id).to eq '456'
       end
     end
   end
