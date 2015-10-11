@@ -48,6 +48,15 @@ describe ContractsHelper do
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
 
+    # TODO: add view tests for this situation
+    context 'there are no changes' do
+      let(:versions) {[]}
+
+      it "doesn't include the changes to that contract" do
+        expect(helper.new_contracts_sentence(versions)).to be nil
+      end
+    end
+
     context 'there was a new contractor, but it has been deleted' do
       let(:versions) {[version1]}
       let(:contract1) {nil}
