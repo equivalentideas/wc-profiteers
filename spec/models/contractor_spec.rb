@@ -32,7 +32,7 @@ describe Contractor do
 
   describe '.import_contractors_from_csv' do
     context 'when csv includes a new contractor' do
-      before { Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv') }
+      before { Contractor.import_contractors_from_csv('spec/fixtures/csv_examples/contractors.csv') }
 
       it 'creates new contractors if we don’t have them already' do
         new_contractor_abn = '1234567890'
@@ -46,7 +46,7 @@ describe Contractor do
         @old_contractor_abn = '1234567890'
         create(:contractor, abn: @old_contractor_abn, updated_at: 7.days.ago)
 
-        Contractor.import_contractors_from_csv('spec/csv_examples/contractors.csv')
+        Contractor.import_contractors_from_csv('spec/fixtures/csv_examples/contractors.csv')
       end
 
       it 'doesn’t update the existing contractor' do
