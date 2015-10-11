@@ -23,7 +23,7 @@
     - contractor.contracts.each do |contract|
       %li.contract{id: "contract_#{contract.id}"}
         %p.contract-description
-          = link_to(contract.display_description, contract.url, title: "View the contract listing at tenders.gov.nsw")
+          = link_to(contract.display_description, contract.url, title: "View source")
         .item-data
           %dl.item-data-group
             %dt Value:
