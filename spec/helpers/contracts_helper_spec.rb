@@ -47,5 +47,14 @@ describe ContractsHelper do
       }
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
+
+    context 'there was a new contractor, but it has been deleted' do
+      let(:versions) {[version1]}
+      let(:contract1) {nil}
+
+      it "doesn't include the changes to that contract" do
+        expect(helper.new_contracts_sentence(versions)).to be nil
+      end
+    end
   end
 end
