@@ -31,6 +31,35 @@ describe Contract do
     end
   end
 
+  describe '.import_contracts_from_csv' do
+    context 'when csv includes a new contract' do
+      it 'creates a new contract' do
+        Contract.import_contracts_from_csv('spec/fixtures/csv_examples/contracts.csv')
+
+        expect(Contract.count).to eq 1
+      end
+
+      it 'associates new contract with a contractor' do
+        contractor = create(:contractor, abn: '123')
+
+        Contract.import_contracts_from_csv('spec/fixtures/csv_examples/contracts.csv')
+
+        expect(contractor.contracts).to eq [Contract.first]
+      end
+    end
+
+    context 'when csv includes a contract with the same can_id' do
+      # not treating can_id as unique at the moment
+      it 'creates it as a new contract anyway' do
+        create(:contract, can_id: 'RMS.123')
+
+        Contract.import_contracts_from_csv('spec/fixtures/csv_examples/contracts.csv')
+
+        expect(Contract.where(can_id: 'RMS.123').count).to eq 2
+      end
+    end
+  end
+
   describe '#display_description' do
     context 'description starts with no caps "westconnex - "' do
       let(:contract) { create(:contract, description: 'westconnex - Foo Service') }

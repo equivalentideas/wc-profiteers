@@ -48,6 +48,35 @@ class Contract < ActiveRecord::Base
     end
   end
 
+  # Note that this does not currently do de-duping for
+  # existing contacts. This hasn't been necessary so far.
+  # Remember, different contracts with the same can_id exists.
+  def self.import_contracts_from_csv(csv_path)
+    require 'CSV'
+
+    csv = CSV.parse(File.read(csv_path), headers: true)
+
+    csv.each do |row|
+      if Contractor.find_by(abn: row["abn"])
+        contractor_id = Contractor.find_by(abn: row["abn"]).id
+      else
+        contractor_id = nil
+      end
+
+      contract = Contract.create(
+        agency: row["agency"],
+        can_id: row["can_id"],
+        contractor_id: contractor_id,
+        description: row["description"],
+        start_date: row["start_date"],
+        end_date: row["end_date"],
+        value: row["value"],
+        url: row["url"],
+        method_of_tendering: row["method_of_tendering"]
+      )
+    end
+  end
+
   def display_description
     description.sub(/^westconnex - /i, '').sub(/^WDA - /, '')
   end
