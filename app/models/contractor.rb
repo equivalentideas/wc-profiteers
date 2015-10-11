@@ -27,7 +27,7 @@ class Contractor < ActiveRecord::Base
   end
 
   def self.import_contractors_from_csv(csv_path)
-    require 'CSV'
+    require 'csv'
     csv = CSV.parse(File.read(csv_path), headers: true)
 
     csv.each do |row|

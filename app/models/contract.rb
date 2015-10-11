@@ -52,7 +52,7 @@ class Contract < ActiveRecord::Base
   # existing contacts. This hasn't been necessary so far.
   # Remember, different contracts with the same can_id exists.
   def self.import_contracts_from_csv(csv_path)
-    require 'CSV'
+    require 'csv'
 
     csv = CSV.parse(File.read(csv_path), headers: true)
 
