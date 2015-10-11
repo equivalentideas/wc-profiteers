@@ -15,6 +15,14 @@ describe Contract do
     end
 
     context 'when there is an existing contract' do
+      before do
+        Timecop.freeze(Time.local(2015, 10, 12, 12, 0, 0))
+      end
+
+      after do
+        Timecop.return
+      end
+
       it 'updates it' do
         create(:contractor, abn: '12345678901')
         create(:contract, can_id: '123', updated_at: 7.days.ago)

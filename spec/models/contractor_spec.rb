@@ -14,7 +14,13 @@ describe Contractor do
 
     context 'when there is an existing contractor' do
       before :each do
+        Timecop.freeze(Time.local(2015, 10, 12, 12, 0, 0))
+
         create(:contractor, abn: '12345678901', updated_at: 7.days.ago)
+      end
+
+      after do
+        Timecop.return
       end
 
       it 'updates it' do
