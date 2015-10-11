@@ -5,6 +5,6 @@ module ContractsHelper
 
   def new_contracts_sentence(create_versions)
     contracts = create_versions.map {|v| link_to_contract(v.item)}
-    return "#{'New contract'.pluralize(contracts.count)}: #{contracts.to_sentence}.".html_safe
+    "#{'New contract'.pluralize(contracts.count)}: #{contracts.to_sentence}.".html_safe
   end
 end
