@@ -4,10 +4,10 @@ describe ContractsHelper do
   context 'There is one contract' do
     let!(:contract1) { Contract.create id: 1, description: 'Foo Service', can_id: '123' }
 
-    describe '#link_to_contract_by_id' do
+    describe '#link_to_contract' do
       let(:id) {1}
-      it { expect(helper.link_to_contract_by_id(id)).to eq "<a href=\"#contract_#{contract1.id}\">Foo Service</a>" }
-      it { expect(helper.link_to_contract_by_id(id)).to be_html_safe }
+      it { expect(helper.link_to_contract(contract1)).to eq "<a href=\"#contract_#{contract1.id}\">Foo Service</a>" }
+      it { expect(helper.link_to_contract(contract1)).to be_html_safe }
     end
   end
 
@@ -23,7 +23,7 @@ describe ContractsHelper do
       let(:versions) {[version1]}
       it {
         expect(helper.new_contracts_sentence(versions))
-          .to eq "New contract: #{helper.link_to_contract_by_id(contract1.id)}."
+          .to eq "New contract: #{helper.link_to_contract(contract1)}."
       }
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
@@ -31,7 +31,7 @@ describe ContractsHelper do
     context 'there are two new contracts' do let(:versions) {[version1, version2]}
       it {
         expect(helper.new_contracts_sentence(versions))
-          .to eq "New contracts: #{helper.link_to_contract_by_id(contract1.id)} and #{helper.link_to_contract_by_id(contract2.id)}."
+          .to eq "New contracts: #{helper.link_to_contract(contract1)} and #{helper.link_to_contract(contract2)}."
       }
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
@@ -39,7 +39,7 @@ describe ContractsHelper do
     context 'there are three new contracts' do let(:versions) {[version1, version2, version3]}
       it {
         expect(helper.new_contracts_sentence(versions))
-          .to eq "New contracts: #{helper.link_to_contract_by_id(contract1.id)}, #{helper.link_to_contract_by_id(contract2.id)}, and #{helper.link_to_contract_by_id(contract3.id)}."
+          .to eq "New contracts: #{helper.link_to_contract(contract1)}, #{helper.link_to_contract(contract2)}, and #{helper.link_to_contract(contract3)}."
       }
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
