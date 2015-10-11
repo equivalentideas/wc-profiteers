@@ -28,7 +28,9 @@ describe ContractsHelper do
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
 
-    context 'there are two new contracts' do let(:versions) {[version1, version2]}
+    context 'there are two new contracts' do
+      let(:versions) {[version1, version2]}
+
       it {
         expect(helper.new_contracts_sentence(versions))
           .to eq "New contracts: #{helper.link_to_contract(contract1)} and #{helper.link_to_contract(contract2)}."
@@ -36,7 +38,9 @@ describe ContractsHelper do
       it { expect(helper.new_contracts_sentence(versions)).to be_html_safe }
     end
 
-    context 'there are three new contracts' do let(:versions) {[version1, version2, version3]}
+    context 'there are three new contracts' do
+      let(:versions) {[version1, version2, version3]}
+
       it {
         expect(helper.new_contracts_sentence(versions))
           .to eq "New contracts: #{helper.link_to_contract(contract1)}, #{helper.link_to_contract(contract2)}, and #{helper.link_to_contract(contract3)}."
