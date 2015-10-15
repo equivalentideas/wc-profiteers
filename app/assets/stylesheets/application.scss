@@ -126,12 +126,6 @@ li:last-child {
   margin-bottom: 0;
 }
 
-li:target {
-  border-left: .3em #9D4934 solid;
-  padding-left: 1em;
-  transition: all .4s ease;
-}
-
 .lede {
   margin-bottom: 2.5em;
 
@@ -204,6 +198,11 @@ li:target {
     margin-bottom: 2.5em;
   }
 
+  &:target header {
+    background-color: #F6ECD0;
+    transition: all .4s ease;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -250,6 +249,10 @@ li:target {
 }
 
 .contract {
+  &:target {
+    background-color: #F6ECD0;
+    transition: all .4s ease;
+  }
 }
 
 .contract-description {
