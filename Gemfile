@@ -58,6 +58,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'spring'
   gem 'rubocop', require: false
+  gem 'rack-mini-profiler'
 end
 
 group :production do
