@@ -62,6 +62,28 @@ describe Contractor do
     end
   end
 
+  describe '#total_est_contract_value' do
+    context 'when the contractor has no contracts' do
+      it 'has 0 total value' do
+        contractor = create(:contractor)
+
+        expect(contractor.total_est_contract_value).to eq 0
+      end
+
+    end
+
+    context 'when the contractor has contracts' do
+      it 'has is the sum of their value' do
+        contractor = create(:contractor)
+        create(:contract, contractor_id: contractor.id, value: 1)
+        create(:contract, contractor_id: contractor.id, value: 1)
+        create(:contract, contractor_id: contractor.id, value: 1)
+
+        expect(contractor.total_est_contract_value).to eq 3.0
+      end
+    end
+  end
+
   describe '#corporate_id' do
     context 'when there is a contractor with an ABN but no ACN' do
       let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: nil) }
