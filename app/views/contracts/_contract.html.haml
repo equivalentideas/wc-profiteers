@@ -1,0 +1,10 @@
+%li.contract{id: "contract_#{contract.id}", data: {contract_award_notice_id: contract.can_id}}
+  %p.contract-description
+    = link_to(contract.display_description, contract.url, title: "View source")
+  .item-data
+    %dl.item-data-group
+      %dt Value:
+      %dd.contract-value #{number_to_currency(contract.value, precision: 0)}
+    %dl.item-data-group
+      %dt Period:
+      %dd.contract-duration #{contract.start_date} – #{contract.end_date ? contract.end_date : "open"}
