@@ -6,7 +6,7 @@
     %title Why Westconnex?
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %meta{name: "description", content: "At least #{@contractors.count} companies have been contracted by the NSW Government to work on WestConnex.  So far, their #{pluralize(Contract.count, "contracts")} are worth #{number_to_currency(Contract.sum(:value), precision: 0)}."}
+    %meta{name: "description", content: "At least #{@contractors.count} companies have been contracted by the NSW Government to work on WestConnex.  So far, their #{pluralize(@contract_count, "contracts")} are worth #{number_to_currency(@contract_total_value, precision: 0)}."}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
 
     /[if lt IE 9]
