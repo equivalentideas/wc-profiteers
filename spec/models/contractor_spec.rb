@@ -8,7 +8,18 @@ describe Contractor do
           Contractor.import_contractors_from_morph
         end
 
-        expect(Contractor.find_by(abn: '12345678901').abn).to eq '12345678901'
+        expect(Contractor.find_by(abn: '76128188714').name)
+          .to eq 'INFRASOL GROUP PTY LIMITED'
+      end
+    end
+
+    context 'when there is a specific contractor' do
+      it 'adds them as a new contractor' do
+        VCR.use_cassette('morph_requests') do
+          Contractor.import_contractors_from_morph
+        end
+
+        expect(Contractor.find_by(abn: '93690339855').name).to eq 'PEARL, JOSHUA'
       end
     end
 
@@ -16,7 +27,7 @@ describe Contractor do
       before :each do
         Timecop.freeze(Time.local(2015, 10, 12, 12, 0, 0))
 
-        create(:contractor, abn: '12345678901', updated_at: 7.days.ago)
+        create(:contractor, abn: '93690339855', updated_at: 7.days.ago)
       end
 
       after do
@@ -28,9 +39,9 @@ describe Contractor do
           Contractor.import_contractors_from_morph
         end
 
-        expect(Contractor.find_by(abn: '12345678901').updated_at.to_date)
+        expect(Contractor.find_by(abn: '93690339855').updated_at.to_date)
           .to_not eq 7.days.ago.to_date
-        expect(Contractor.find_by(abn: '12345678901').updated_at.to_date)
+        expect(Contractor.find_by(abn: '93690339855').updated_at.to_date)
           .to eq Date.today
       end
     end
