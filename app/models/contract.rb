@@ -18,7 +18,8 @@ class Contract < ActiveRecord::Base
         puts "from #{url}"
       end
 
-      JSON.parse(open(url).read)[0]["contracts"].split(", ").each do |c|
+      contracts_data = JSON.parse(open(url).read)
+      contracts_data[0]["contracts"].split(", ").each do |c|
         url = morph_url_base + "select%20*%20from%20'contracts'%20where%20contract_award_notice_id%3D'#{c}'"
         contract_data = JSON.parse(open(url).read)[0]
 
