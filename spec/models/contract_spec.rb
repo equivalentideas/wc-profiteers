@@ -2,6 +2,18 @@ require 'rails_helper'
 
 describe Contract do
   describe '.import_contracts_from_morph' do
+    context 'when there is are no contracts in morph for the contractor' do
+      it "does nothing" do
+        contractor = create(:contractor, abn: '9876')
+
+        VCR.use_cassette('morph_requests') do
+          Contract.import_contracts_from_morph
+        end
+
+        expect(contractor.contracts).to eq []
+      end
+    end
+
     context 'when there is a new contract' do
       it 'creates a new contract' do
         create(:contractor, abn: '12345678901')
