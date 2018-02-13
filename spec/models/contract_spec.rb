@@ -16,13 +16,13 @@ describe Contract do
 
     context 'when there is a new contract' do
       it 'creates a new contract' do
-        create(:contractor, abn: '12345678901')
+        create(:contractor, abn: '44609258527')
 
         VCR.use_cassette('morph_requests') do
           Contract.import_contracts_from_morph
         end
 
-        expect(Contract.find_by(can_id: '123').can_id).to eq '123'
+        expect(Contract.find_by(can_id: '421966').contractor.abn).to eq '44609258527'
       end
     end
 
@@ -48,16 +48,14 @@ describe Contract do
       end
 
       it 'updates it' do
-        create(:contractor, abn: '12345678901')
-        create(:contract, can_id: '123', updated_at: 7.days.ago)
+        create(:contractor, abn: '44609258527')
+        create(:contract, can_id: '421966', updated_at: 7.days.ago)
 
         VCR.use_cassette('morph_requests') do
           Contract.import_contracts_from_morph
         end
 
-        expect(Contract.find_by(can_id: '123').updated_at.to_date)
-          .to_not eq 7.days.ago.to_date
-        expect(Contract.find_by(can_id: '123').updated_at.to_date)
+        expect(Contract.find_by(can_id: '421966').updated_at.to_date)
           .to eq Date.today
       end
     end

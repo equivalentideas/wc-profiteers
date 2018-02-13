@@ -2,60 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20contracts%20from%20'contractors'%20where%20abn='12345678901'
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Request-Id:
-      - 921bcd2b-a734-4465-ae29-4b2cb5ff0c2d
-      Etag:
-      - '"75bd8701cc60ed3f88282bbb16717a8a"'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Runtime:
-      - '0.046350'
-      X-Content-Type-Options:
-      - nosniff
-      Date:
-      - Sat, 10 Oct 2015 09:14:03 GMT
-      Set-Cookie:
-      - _morph_session=SUx1YTVpdmpBVmZhVEl6UjBDdDZLdGNNYTBFYmNURktpL2xLd3lsZHRYV2s1SVg3UXZQSnc4N2d1YTJSTmVrK0dOcWF3QWJSNDdPaHNEbGYvVzkreE1ZZW04R3l2MW1TeEx3VVdwMDNBelM3eEJTaUUzVzhTMlJLT3R1TmEvb0c5N0R0emZhYW1XNnV4QlNBcnZ1elFnWjUwdGFYQnFOOTVUWmd0TU5qRWhXVHNBR0M2NUxEQ2NScFUySUxCTzBaT3p3aDJWckkvazByMkZQMFlBcjRFeDRjdU1XdlNvanFubHRuVHRFYTJick80bmFidXMvaWJsNEthWHpCb0Y3MW1FN0lpdXdvWHZoQ3djbklSN0p5STRKU0dPdzdxMzBveHhOVEhXektZeFdFMzRUYkJGTmk4QTEreXFtYUZwV1AtLXF6WVlBTmQxOGd0YjBKNVlmQkpBV3c9PQ%3D%3D--4bd39051b997ed4e93cbf1bb29bdf433d7f3af34;
-        path=/; HttpOnly
-      X-Powered-By:
-      - Phusion Passenger 5.0.20
-      Server:
-      - nginx/1.8.0 + Phusion Passenger 5.0.20
-    body:
-      encoding: UTF-8
-      string: '[{"contracts":"123"}]'
-    http_version: 
-  recorded_at: Sat, 10 Oct 2015 09:14:15 GMT
-- request:
-    method: get
     uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20*%20from%20'contracts'%20where%20contract_award_notice_id='123'
     body:
       encoding: US-ASCII
@@ -1071,4 +1017,125 @@ http_interactions:
         Place","city":"SYDNEY","state":"NSW","postcode":"2000","country":"AUSTRALIA","contracts":"RMS.13.2909.0220"}]'
     http_version: 
   recorded_at: Tue, 13 Feb 2018 04:36:44 GMT
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20contracts%20from%20%27contractors%27%20where%20abn=%2744609258527%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - be0b18a0-c56c-4034-b329-5b5b1e8eca95
+      Etag:
+      - W/"192a08804c3fb209139416e5cf99555f"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.014472'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Tue, 13 Feb 2018 05:21:36 GMT
+      Set-Cookie:
+      - _morph_session=ZXM0bjFuRGMvdzU3V3VPSnB6eFBzbGFlYmltZXMzOGlNMFhxWmp0ckVJako5WlNxaXJJTFdIcnY5YVVSZ1FSM2hBTC9UbDR6VEY2cWZnY3BpS2l1cENCdDl5L01nT28yUjVYZ0FCYlF3T2xjcE5CckRFdkdwM3FXSDJkQWg4d09td2Y3SnBXQlB6NHM0dzRiMjBvQ0QxQklidDJGM3B4RWhMSHR3NFRETlNCVzBhMW5OL1hFWXVpYmZCTDF0VmxJR1k4UmUwbmZadzVxYmxPKzVwQ1U3c3ptOXM1V3RxcHpkS1A1QWx2TmFobGdmYjlla2ppak9mNFZKSm01ZFFxQVF4U1lFQlJlZHVSS2pzRVlVZitraWlMbUtzWVRNWkFWN1dmYmVNTklwWU1WS2JkNGdEdnFZc3ErUzNmeHhkdVZKWUxBQnZWc2R1Uk9kSjB0Tkd0d0VBPT0tLXV2ZWpUNXZrNm5KWHM2NWl5ZXBWZXc9PQ%3D%3D--49ba5bb7b668b806c964ace38d4de6cf1a84df47;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.1.12
+    body:
+      encoding: UTF-8
+      string: '[{"contracts":"421966"}]'
+    http_version: 
+  recorded_at: Tue, 13 Feb 2018 05:21:36 GMT
+- request:
+    method: get
+    uri: https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=<MORPH_API_KEY>&query=select%20*%20from%20%27contracts%27%20where%20contract_award_notice_id=%27421966%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 37b3e03f-ba19-4dca-82e9-e8b959e632c4
+      Etag:
+      - W/"378ab3438b21566a3d40be8bd36d6d9e"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.013684'
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Tue, 13 Feb 2018 05:21:37 GMT
+      Set-Cookie:
+      - _morph_session=aWJDd25IMktvUUY3V3ZqUnFSam42aElyYTNRZUZPMkFLTXR5UjJFWXlLcFRUNlR5dnpGaTBHSmdHdG5aZVZqaTB5bXVrZlVEUEJVOG8yVkNGajhKN01iWXRaTDlNN3BiV1M5SEhEbVhMV1pjTUJzbDcrU2xNalZMK1I1NG1KWHZpSUpzYlA1WVpqWjJ1aTVYaTBxdmg3ZXA4cm1KV2ZTTVNTNnJqWXBMMlRrWHhxQk5jYWhnOTg4bERnSkYzWEZJdXBGUDVQdTFNR1loQ1pzMk1IdDlFc3A3K0NBQkNlUW9oVVNHREp1YkVHN3NISE82MU0yKzFUOEVMNzZHM1hFMmZpckEzbURRTmlEKzIyRnNmcklvUXFQNXpidkt0WVpnZU5id1FYVExybTFVcXRUbDlpMjF4RGNxNW02bDg3ZFdTV2ZMT3B4YmZYQ0xzNkdPc1ZXMVVBPT0tLTlZU0Z1OFBIUnBweDFPVDM1VGhLOGc9PQ%3D%3D--2abb6283d3589a121fbfb736a24137fd430bb7f9;
+        path=/; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.1.12
+    body:
+      encoding: UTF-8
+      string: '[{"last_updated":"2015-08-06 14:18","url":"https://tenders.nsw.gov.au/?event=public.cn.view\u0026CNUUID=9416603A-06B6-2DB3-A5D8EE7874BA12BA","date_scraped":"2015-08-14","contract_award_notice_id":"421966","agency":"Transport
+        NSW - Corporate","category":"80101600 - Project management","publish_date":"2015-07-16","particulars_of_the_goods_or_services_to_be_provided_under_this_contract":"WestConnex
+        Transportation Planning Services representing TfNSW in the WestConnex Team","contract_start_date":"2014-08-11","contract_end_date":"2015-03-31","contractor_name":"Cattell
+        Cooper","acn":null,"abn":"44609258527","street_address":"13 Emmett Street","town_or_city":"Crows
+        Nest","state_or_territory":"NSW","postcode":"2065","country":"AUSTRALIA","other_private_sector_entities_involved_in_with_an_interest_in_or_benefiting_from_this_contract":"Not
+        Applicable","contract_value_est":158840.0,"any_provisions_for_payment_to_the_contractor_for_operational_or_maintenance_services":"Not
+        Applicable","method_of_tendering":"Limited","description_of_any_provision_under_which_the_amount_payable_to_the_contractor_may_be_varied":"Not
+        Applicable","description_of_any_provisions_under_which_the_contract_may_be_renegotiated":"Not
+        Applicable","tender_evaluation_criteria":"* Nominee''s relevant experience
+        * Rates","contract_contains_agency_piggyback_clause":"No","name_of_sub_contractors":"Not
+        Applicable","applicable_industrial_instruments":"Not Applicable","location_of_work":"Not
+        Applicable","agency_contact":"Major Projects Transport Planning","agency_state_or_territory":"NSW","agency_country":"AUSTRALIA","email_address":null,"amended_contract_value_est":245360.0,"agency_street_address":"12
+        Castlereagh Street","agency_town_or_city":"Sydney","agency_postcode":"2000","phone_number":"02
+        8265 7216","original_contract_duration":null,"amended_contract_duration":null,"other_information":null}]'
+    http_version: 
+  recorded_at: Tue, 13 Feb 2018 05:21:37 GMT
 recorded_with: VCR 4.0.0
