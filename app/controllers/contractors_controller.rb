@@ -9,7 +9,7 @@ class ContractorsController < ApplicationController
 
     # create a Array of days with contracts/contractors created or value changed.
     @days_with_changes = @contractor_history.group_by_day(:created_at).keys.map{|k| k.to_date}
-    @days_with_changes.insert @contract_history.group_by_day(:created_at).keys.map{|k| k.to_date}
-    @days_with_changes = @days_with_changes.sort { |a,b| b <=> a }[0..2]
+    @days_with_changes += @contract_history.group_by_day(:created_at).keys.map{|k| k.to_date}
+    @days_with_changes = @days_with_changes.uniq.sort { |a,b| b <=> a }[0..2]
   end
 end
