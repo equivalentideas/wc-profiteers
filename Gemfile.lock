@@ -317,6 +317,7 @@ DEPENDENCIES
   jquery-rails
   paper_trail (~> 4.0.0.rc)
   pg (~> 0.15)
+  pry
   rack-mini-profiler
   rails (~> 4.2.0)
   rails_12factor
