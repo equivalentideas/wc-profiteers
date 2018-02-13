@@ -169,7 +169,7 @@ GEM
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
-    pg (1.0.0)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -316,7 +316,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paper_trail (~> 4.0.0.rc)
-  pg
+  pg (~> 0.15)
   rack-mini-profiler
   rails (~> 4.2.0)
   rails_12factor
