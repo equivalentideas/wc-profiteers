@@ -22,7 +22,7 @@ group :test do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.7'
   gem 'dotenv-rails'
   gem 'pry'
 end
