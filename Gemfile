@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.4.2"
 
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'rails', '~> 5.0.0'
 gem 'sass-rails'
 gem 'autoprefixer-rails'

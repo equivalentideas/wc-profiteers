@@ -300,7 +300,7 @@ DEPENDENCIES
   guard-rspec
   haml-rails
   paper_trail (~> 4.0.0.rc)
-  pg
+  pg (~> 0.18)
   pry
   rack-mini-profiler
   rails (~> 5.0.0)
