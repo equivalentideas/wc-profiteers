@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :contractor do
     name "Foo Company"
     abn "123"

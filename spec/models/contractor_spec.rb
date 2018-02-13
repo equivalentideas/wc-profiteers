@@ -97,7 +97,7 @@ describe Contractor do
 
   describe '#corporate_id' do
     context 'when there is a contractor with an ABN but no ACN' do
-      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: nil) }
+      let(:contractor) { FactoryBot.create(:contractor, abn: '123', acn: nil) }
 
       it 'is the ABN' do
         expect(contractor.corporate_id).to eq '123'
@@ -105,7 +105,7 @@ describe Contractor do
     end
 
     context 'when there is a contractor with an ACN and an ABN' do
-      let(:contractor) { FactoryGirl.create(:contractor, abn: '123', acn: '456') }
+      let(:contractor) { FactoryBot.create(:contractor, abn: '123', acn: '456') }
 
       it 'is the ACN' do
         expect(contractor.corporate_id).to eq '456'
