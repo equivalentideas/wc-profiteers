@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby "2.4.2"
 
 gem 'pg'
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 5.0.0'
 gem 'sass-rails'
 gem 'autoprefixer-rails', '~> 5.1.11'
 gem 'uglifier', '>= 1.3.0'
