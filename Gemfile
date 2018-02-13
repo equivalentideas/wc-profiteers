@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.4.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.10'
@@ -35,7 +35,7 @@ gem 'dateslices'
 gem 'redcarpet'
 
 group :test do
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_bot_rails'
   gem 'vcr'
   gem 'webmock'
   gem 'database_cleaner'
