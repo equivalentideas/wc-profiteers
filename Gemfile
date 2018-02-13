@@ -3,7 +3,7 @@ ruby "2.4.2"
 
 gem 'pg'
 gem 'rails', '~> 4.2.0'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'autoprefixer-rails', '~> 5.1.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
