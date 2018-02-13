@@ -33,6 +33,7 @@ describe Contract do
           create(:contractor, abn: '93690339855')
           Contract.import_contracts_from_morph
         end
+
         expect( Contract.find_by(can_id: 'RMS.14.7205.2036').can_id).to eq 'RMS.14.7205.2036'
       end
     end

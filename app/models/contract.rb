@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Contract < ActiveRecord::Base
   has_paper_trail :ignore => [:date_scraped, :updated_at]
 
@@ -6,8 +8,6 @@ class Contract < ActiveRecord::Base
   default_scope {order('start_date DESC')}
 
   def self.import_contracts_from_morph(with_debug_output: nil)
-    require 'open-uri'
-
     morph_url_base = "https://api.morph.io/equivalentideas/westconnex_contracts/data.json?key=#{ENV['MORPH_SECRET_KEY']}&query="
 
     Contractor.all.each do |contractor|
