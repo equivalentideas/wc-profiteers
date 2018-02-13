@@ -42,9 +42,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
     ast (2.4.0)
-    autoprefixer-rails (5.1.11)
+    autoprefixer-rails (8.0.0)
       execjs
-      json
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -129,7 +128,6 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.4)
       concurrent-ruby (~> 1.0)
-    json (1.8.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -287,7 +285,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails (~> 5.1.11)
+  autoprefixer-rails
   better_errors
   binding_of_caller
   by_star (~> 2.2.1)

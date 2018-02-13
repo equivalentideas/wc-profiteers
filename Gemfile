@@ -4,7 +4,7 @@ ruby "2.4.2"
 gem 'pg'
 gem 'rails', '~> 5.0.0'
 gem 'sass-rails'
-gem 'autoprefixer-rails', '~> 5.1.11'
+gem 'autoprefixer-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'haml-rails'
 gem 'paper_trail', '~> 4.0.0.rc'
